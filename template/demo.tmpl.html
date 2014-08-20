@@ -1,0 +1,363 @@
+<material-content>
+
+  <material-toolbar class="material-theme-light">
+    <h1 class="material-toolbar-tools">
+      <span>Angular Material Starter</span>
+    </h1>
+  </material-toolbar>
+
+  <material-content class="material-content-padding">
+    Lorem ipsum dolor sit amet, ne quod novum mei. Sea omnium invenire mediocrem at, in lobortis conclusionemque nam. Ne deleniti appetere reprimique pro, inani labitur disputationi te sed. At vix sale omnesque, id pro labitur reformidans accommodare, cum labores honestatis eu. Nec quem lucilius in, eam praesent reformidans no. Sed laudem aliquam ne.
+  </material-content>
+
+  <!-- Buttons -->
+  <material-toolbar class="material-theme-light">
+    <h1 class="material-toolbar-tools">
+      <span>Buttons</span>
+    </h1>
+  </material-toolbar>
+
+  <material-content class="material-content-padding">
+    <section layout="vertical" layout-sm="horizontal" layout-padding layout-align="center center">
+      <material-button>Button</material-button>
+      <material-button noink class="material-button-colored">Button (noink)</material-button>
+      <material-button disabled class="material-button-colored">Disabled</material-button>
+      <div class="label">flat</div>
+    </section>
+
+    <section layout="vertical" layout-sm="horizontal" layout-padding layout-align="center center">
+      <material-button class="material-button-raised">Button</material-button>
+      <material-button class="material-button-raised material-button-colored">Colored</material-button>
+      <material-button disabled class="material-button-raised material-button-colored">Disabled</material-button>
+      <div class="label">raised</div>
+    </section>
+
+    <section layout="vertical" layout-sm="horizontal" layout-padding layout-align="center center">
+      <a><material-button class="material-button-raised">Button</material-button></a>
+      <a><material-button class="material-button-raised material-button-colored">Colored</material-button></a>
+      <a><material-button disabled class="material-button-raised material-button-colored">Disabled</material-button></a>
+      <div class="label">anchors</div>
+    </section>
+
+    <section layout="vertical" layout-sm="horizontal" layout-padding layout-align="center center">
+      <material-button>Button</material-button>
+      <material-button class="material-button-colored">Colored</material-button>
+      <div class="label">flat + hover state</div>
+    </section>
+
+    <section layout="vertical" layout-sm="horizontal" layout-padding layout-align="center center">
+      <material-button class="material-button-raised">Button</material-button>
+      <material-button class="material-button-raised material-button-colored">Colored</material-button>
+      <div class="label">raised + hover state</div>
+    </section>
+
+    <section layout="vertical" layout-sm="horizontal" layout-padding layout-align="center center">
+      <material-button>Button</material-button>
+      <material-button class="material-button-colored">Colored</material-button>
+      <div class="label">flat + focused</div>
+    </section>
+
+    <section layout="vertical" layout-sm="horizontal" layout-padding layout-align="center center">
+      <material-button class="material-button-raised">Button</material-button>
+      <material-button class="material-button-raised material-button-colored">Colored</material-button>
+      <div class="label">raised + focused</div>
+    </section>
+
+    <section layout="vertical" layout-sm="horizontal" layout-padding layout-align="center center" style="height: 92px;margin-top: 0px;">
+
+        <material-button class="material-button-fab">
+            <material-icon icon="img/icons/ic_access_time_24px.svg" style="width: 24px; height: 24px;"></material-icon>
+        </material-button>
+
+      <material-button class="material-button-fab">
+        <material-icon icon="img/icons/ic_insert_drive_file_24px.svg" style="width: 24px; height: 24px;"></material-icon>
+      </material-button>
+
+        <material-button class="material-button-fab" disabled>
+            <material-icon icon="img/icons/ic_comment_24px.svg" style="width: 24px; height: 24px;"></material-icon>
+        </material-button>
+
+        <material-button class="material-button-fab">
+            <material-icon icon="img/icons/ic_people_24px.svg" style="width: 24px; height: 24px;"></material-icon>
+        </material-button>
+
+
+      <div class="label">FAB</div>
+    </section>
+
+    <section layout="vertical" layout-sm="horizontal" layout-padding layout-align="center center">
+      <div class="material-button-group">
+        <material-button class="">Reset</material-button>
+        <material-button class="">RSVP</material-button>
+      </div>
+      <div class="label">Button Group</div>
+    </section>
+
+    <section layout="vertical" layout-sm="horizontal" 
+      layout-padding layout-align="center center">
+      <material-button class="material-theme-green">Button</material-button>
+      <material-button class="material-theme-red">Button</material-button>
+      <material-button class="material-theme-light-blue">Button</material-button>
+      <material-button class="material-theme-yellow">Button</material-button>
+      <div class="label">Themed</div>
+    </section>
+  </material-content>
+
+  <!-- Card -->
+  <material-toolbar class="material-theme-light">
+    <h1 class="material-toolbar-tools">
+      <span>Card</span>
+    </h1>
+  </material-toolbar>
+
+  <material-content class="material-content-padding">
+    <material-card>
+      <img src="img/washedout.png" class="material-card-image">
+      <h2>Paracosm</h2>
+      <p>
+        The titles of Washed Out's breakthrough song and the first single from Paracosm share the
+        two most important words in Ernest Greene's musical language: feel it. It's a simple request, as well...
+      </p>
+    </material-card>
+  </material-content>
+
+  <!-- Checkbox -->
+  <material-toolbar class="material-theme-light">
+    <h1 class="material-toolbar-tools">
+      <span>Checkbox</span>
+    </h1>
+  </material-toolbar>
+
+  <material-content class="material-content-padding prevent-scrolling">
+    <material-checkbox ng-model="data.cb1">
+      Checkbox 1: {{ data.cb1 }}
+    </material-checkbox>
+
+    <material-checkbox ng-model="data.cb2" ng-true-value="yup" ng-false-value="nope">
+      Checkbox 2: {{ data.cb2 }}
+    </material-checkbox>
+  </material-content>
+
+  <!-- Content -->
+  <material-toolbar class="material-theme-light">
+    <h1 class="material-toolbar-tools">
+      <span>Content</span>
+    </h1>
+  </material-toolbar>
+
+  <material-content class="material-content-padding">
+    <material-toolbar class="material-theme-dark">
+      <div class="material-toolbar-tools">
+        <span class="material-flex">Toolbar: dark-theme</span>
+      </div>
+    </material-toolbar>
+
+    <material-content class="material-content-padding">
+      Lorem ipsum dolor sit amet, ne quod novum mei. Sea omnium invenire mediocrem at, in lobortis conclusionemque nam. Ne deleniti appetere reprimique pro, inani labitur disputationi te sed. At vix sale omnesque, id pro labitur reformidans accommodare, cum labores honestatis eu. Nec quem lucilius in, eam praesent reformidans no. Sed laudem aliquam ne.
+    </material-content>
+  </material-content>
+
+  <!-- Dialog -->
+  <material-toolbar class="material-theme-light">
+    <h1 class="material-toolbar-tools">
+      <span>Dialog</span>
+    </h1>
+  </material-toolbar>
+
+  <material-content class="material-content-padding">
+    
+  </material-content>
+
+  <!-- Form -->
+  <material-toolbar class="material-theme-light">
+    <h1 class="material-toolbar-tools">
+      <span>Form</span>
+    </h1>
+  </material-toolbar>
+
+  <material-content class="material-content-padding">
+    <div layout="vertical">
+      <material-toolbar class="material-theme-dark material-tall">
+        <div class="material-toolbar-tools">
+          <ig fid="t1" class="material-input-group-theme-light material-input-group-inverted"></ig>
+          <ig fid="t2" class="material-input-group-theme-light-blue material-input-group-inverted"></ig>
+        </div>
+      </material-toolbar>
+
+      <material-content>
+        <form>
+          <ig fid="i1" class="material-input-group-theme-light"></ig>
+          <ig fid="i2" class="material-input-group-theme-light-blue"></ig>
+          <ig fid="i3" class="material-input-group-theme-dark"></ig>
+          <ig fid="i4" class="material-input-group-theme-green"></ig>
+          <ig fid="i5" class="material-input-group-theme-yellow"></ig>
+          <ig fid="i6" class="material-input-group-theme-orange"></ig>
+          <ig fid="i7" class="material-input-group-theme-purple"></ig>
+          <ig fid="i8" class="material-input-group-theme-red"></ig>
+        </form>
+      </material-content>
+    </div>
+  </material-content>
+
+  <!-- Icon -->
+  <material-toolbar class="material-theme-light">
+    <h1 class="material-toolbar-tools">
+      <span>Icon</span>
+    </h1>
+  </material-toolbar>
+
+  <material-content class="material-content-padding inset">
+    <material-icon icon="img/icons/ic_access_time_24px.svg"></material-icon>
+    <material-icon icon="img/icons/ic_arrow_back_24px.svg"></material-icon>
+    <material-icon icon="img/icons/ic_comment_24px.svg"></material-icon>
+    <material-icon icon="img/icons/ic_insert_drive_file_24px.svg"></material-icon>
+    <material-icon icon="img/icons/ic_label_24px.svg"></material-icon>
+    <material-icon icon="img/icons/ic_menu_24px.svg"></material-icon>
+    <material-icon icon="img/icons/ic_more_vert_24px.svg"></material-icon>
+    <material-icon icon="img/icons/ic_people_24px.svg"></material-icon>
+    <material-icon icon="img/icons/ic_refresh_24px.svg"></material-icon>
+  </material-content>
+
+  <!-- Lists -->
+  <material-toolbar class="material-theme-light">
+    <h1 class="material-toolbar-tools">
+      <span>Lists</span>
+    </h1>
+  </material-toolbar>
+
+  <material-content class="material-content-padding">
+    <material-list>
+      <material-item ng-repeat="item in todos">
+        <div class="material-tile-left">
+            <img ng-src="{{item.face}}" class="face">
+        </div>
+        <div class="material-tile-content">
+          <h2>{{item.what}}</h2>
+          <h3>{{item.who}}</h3>
+          <p>
+            {{item.notes}}
+          </p>
+        </div>
+        <div class="material-tile-right">
+          {{item.when}}
+        </div>
+      </material-item>
+    </material-list>
+  </material-content>
+
+  <!-- Radio Button -->
+  <material-toolbar class="material-theme-light">
+    <h1 class="material-toolbar-tools">
+      <span>Radio Button</span>
+    </h1>
+  </material-toolbar>
+
+  <material-content class="material-content-padding prevent-scrolling">
+    <p>
+      <button class="material-button" ng-click="addItem()">Add</button>
+      <button class="material-button" ng-click="removeItem()">Remove</button>
+    </p>
+
+    <material-radio-group ng-model="data.group2">
+      <material-radio-button value="1">
+        Label 1
+      </material-radio-button>
+
+      <material-radio-button value="2">
+        Label 2
+      </material-radio-button>
+
+      <material-radio-button value="3">
+        Label 3
+      </material-radio-button>
+    </material-radio-group>
+
+    <p>Group 1 Selected: {{ data.group2 }}</p>
+
+    <material-radio-group ng-model="data.group1">
+      <material-radio-button ng-repeat="d in radioData" ng-value="d.value">
+        {{ d.label }}
+      </material-radio-button>
+    </material-radio-group>
+
+    <p style="margin-bottom:50px">Group 2 Selected: {{ data.group1 }}</p>
+  </material-content>
+
+  <!-- Scroll Header -->
+  <material-toolbar class="material-theme-light">
+    <h1 class="material-toolbar-tools">
+      <span>Scroll Header</span>
+    </h1>
+  </material-toolbar>
+
+  <material-content class="material-content-padding">
+    
+  </material-content>
+
+  <!-- Side Navigation -->
+  <material-toolbar class="material-theme-light">
+    <h1 class="material-toolbar-tools">
+      <span>Side Navigation</span>
+    </h1>
+  </material-toolbar>
+
+  <material-content class="material-content-padding">
+    
+  </material-content>
+
+  <!-- Slider -->
+  <material-toolbar class="material-theme-light">
+    <h1 class="material-toolbar-tools">
+      <span>Slider</span>
+    </h1>
+  </material-toolbar>
+
+  <material-content class="material-content-padding">
+    
+  </material-content>
+
+  <!-- Tabs -->
+  <material-toolbar class="material-theme-light">
+    <h1 class="material-toolbar-tools">
+      <span>Tabs</span>
+    </h1>
+  </material-toolbar>
+
+  <material-content class="material-content-padding">
+    
+  </material-content>
+
+  <!-- Toast -->
+  <material-toolbar class="material-theme-light">
+    <h1 class="material-toolbar-tools">
+      <span>Toast</span>
+    </h1>
+  </material-toolbar>
+
+  <material-content class="material-content-padding">
+    
+  </material-content>
+
+  <!-- Toolbar -->
+  <material-toolbar class="material-theme-light">
+    <h1 class="material-toolbar-tools">
+      <span>Toolbar</span>
+    </h1>
+  </material-toolbar>
+
+  <material-content class="material-content-padding">
+    
+  </material-content>
+
+  <!-- Whiteframe -->
+  <material-toolbar class="material-theme-light">
+    <h1 class="material-toolbar-tools">
+      <span>Whiteframe</span>
+    </h1>
+  </material-toolbar>
+
+  <material-content class="material-content-padding">
+    
+  </material-content>
+
+</material-content>
