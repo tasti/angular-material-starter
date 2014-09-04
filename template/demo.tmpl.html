@@ -79,7 +79,7 @@
             <material-icon icon="img/icons/ic_comment_24px.svg" style="width: 24px; height: 24px;"></material-icon>
         </material-button>
 
-        <material-button class="material-button-fab">
+        <material-button class="material-button-fab material-theme-light-blue">
             <material-icon icon="img/icons/ic_people_24px.svg" style="width: 24px; height: 24px;"></material-icon>
         </material-button>
 
@@ -130,13 +130,25 @@
     </h1>
   </material-toolbar>
 
-  <material-content class="material-content-padding prevent-scrolling">
-    <material-checkbox ng-model="data.cb1">
+  <material-content class="material-content-padding">
+    <material-checkbox ng-model="data.cb1" aria-label="Checkbox 1">
       Checkbox 1: {{ data.cb1 }}
     </material-checkbox>
 
-    <material-checkbox ng-model="data.cb2" ng-true-value="yup" ng-false-value="nope">
+    <material-checkbox ng-model="data.cb2" aria-label="Checkbox 2" ng-true-value="yup" ng-false-value="nope">
       Checkbox 2: {{ data.cb2 }}
+    </material-checkbox>
+
+    <material-checkbox disabled aria-label="Disabled checkbox">
+      Checkbox (Disabled)
+    </material-checkbox>
+
+    <material-checkbox disabled aria-label="Disabled checked checkbox" ng-model="data.cb4" ng-init="data.cb4=true">
+      Checkbox (Disabled, Checked)
+    </material-checkbox>
+
+    <material-checkbox noink aria-label="Checkbox No Ink">
+      Checkbox (No Ink)
     </material-checkbox>
   </material-content>
 
@@ -187,7 +199,7 @@
       </material-toolbar>
 
       <material-content>
-        <form>
+        <form style="padding-left: 20px;">
           <ig fid="i1" class="material-input-group-theme-light"></ig>
           <ig fid="i2" class="material-input-group-theme-light-blue"></ig>
           <ig fid="i3" class="material-input-group-theme-dark"></ig>
@@ -256,44 +268,37 @@
 
   <material-content class="material-content-padding prevent-scrolling">
     <p>
-      <button class="material-button" ng-click="addItem()">Add</button>
-      <button class="material-button" ng-click="removeItem()">Remove</button>
+      <material-button ng-click="addItem()">Add</material-button>
+      <material-button ng-click="removeItem()">Remove</material-button>
     </p>
 
-    <material-radio-group ng-model="data.group2">
-      <material-radio-button value="1">
+    <material-radio-group ng-model="data.group1">
+
+      <material-radio-button value="1" aria-label="Label 1">
         Label 1
       </material-radio-button>
 
-      <material-radio-button value="2">
+      <material-radio-button value="2" noink>
         Label 2
       </material-radio-button>
 
-      <material-radio-button value="3">
+      <material-radio-button value="3" aria-label="Label 3">
         Label 3
       </material-radio-button>
+
     </material-radio-group>
 
-    <p>Group 1 Selected: {{ data.group2 }}</p>
+    <p>Group 1 Selected: {{ data.group1 }}</p>
 
-    <material-radio-group ng-model="data.group1">
-      <material-radio-button ng-repeat="d in radioData" ng-value="d.value">
-        {{ d.label }}
+    <material-radio-group ng-model="data.group2">
+
+      <material-radio-button ng-repeat="d in radioData" ng-value="d.value" aria-label="{{ d.label }}">
+          {{ d.label }}
       </material-radio-button>
+
     </material-radio-group>
 
-    <p style="margin-bottom:50px">Group 2 Selected: {{ data.group1 }}</p>
-  </material-content>
-
-  <!-- Scroll Header -->
-  <material-toolbar class="material-theme-light">
-    <h1 class="material-toolbar-tools">
-      <span>Scroll Header</span>
-    </h1>
-  </material-toolbar>
-
-  <material-content class="material-content-padding">
-    
+    <p style="margin-bottom:50px">Group 2 Selected: {{ data.group2 }}</p>
   </material-content>
 
   <!-- Side Navigation -->
@@ -315,7 +320,21 @@
   </material-toolbar>
 
   <material-content class="material-content-padding">
-    
+    <material-slider>
+      <input type="range" ng-model="data.slider1">
+    </material-slider>
+
+    <material-slider>
+      <input type="range" ng-model="data.slider2" min="33" max="67">
+    </material-slider>
+
+    <material-slider>
+      <input type="range" ng-model="data.slider3" min="-10" max="10" step="2">
+    </material-slider>
+
+    <p>Slider 1: {{ data.slider1 }}</p>
+    <p>Slider 2: {{ data.slider2 }}</p>
+    <p>Slider 3: {{ data.slider3 }}</p>
   </material-content>
 
   <!-- Tabs -->
@@ -348,7 +367,67 @@
   </material-toolbar>
 
   <material-content class="material-content-padding">
-    
+    <material-toolbar class="material-theme-light">
+      <h1 class="material-toolbar-tools">
+        <span>Toolbar: light-theme (default)</span>
+      </h1>
+    </material-toolbar>
+
+    <br>
+
+    <material-toolbar class="material-theme-dark">
+      <h1 class="material-toolbar-tools">
+        <span>Toolbar: dark-theme</span>
+      </h1>
+    </material-toolbar>
+
+    <br>
+
+    <material-toolbar class="material-theme-green material-tall">
+      <h1 class="material-toolbar-tools">
+        <span>Toolbar: tall</span>
+      </h1>
+    </material-toolbar>
+
+    <br>
+
+    <material-toolbar class="material-theme-yellow material-tall">
+      <span flex></span>
+      <h1 class="material-toolbar-tools material-toolbar-tools-bottom">
+        <span class="material-flex">Toolbar: tall with actions pin to the bottom</span>
+      </h1>
+    </material-toolbar>
+
+    <br>
+
+    <material-toolbar class="material-theme-orange material-medium-tall">
+      <h1 class="material-toolbar-tools material-toolbar-tools-top">
+        <material-icon style="width: 24px; height: 24px;">
+          <svg-icon></svg-icon>
+        </material-icon>
+      </h1>
+      <span flex></span>
+      <h1 class="material-toolbar-tools material-toolbar-tools-bottom">
+        <span>Toolbar: medium tall with label aligns to the bottom</span>
+      </h1>
+    </material-toolbar>
+
+    <br>
+
+    <material-toolbar class="material-theme-purple material-tall">
+      <h1 class="material-toolbar-tools material-toolbar-tools-top">
+        <material-icon style="width: 24px; height: 24px;">
+          <svg-icon></svg-icon>
+        </material-icon>
+      </h1>
+      <h1 class="material-toolbar-tools" layout-arrange="center center">
+        <span>Toolbar: label aligns to the middle</span>
+      </h1>
+      <span flex></span>
+      <h1 class="material-toolbar-tools">
+        <div style="font-size: 18px">Some stuff aligns to the bottom</div>
+      </h1>
+    </material-toolbar>
   </material-content>
 
   <!-- Whiteframe -->
@@ -359,7 +438,27 @@
   </material-toolbar>
 
   <material-content class="material-content-padding">
-    
+    <div layout="vertical" layout-fill>
+      <material-whiteframe class="material-whiteframe-z1" layout layout-align="center center">
+        <span>.material-whiteframe-z1</span>
+      </material-whiteframe>
+
+      <material-whiteframe class="material-whiteframe-z2" layout layout-align="center center">
+        <span>.material-whiteframe-z2</span>
+      </material-whiteframe>
+
+      <material-whiteframe class="material-whiteframe-z3" layout layout-align="center center">
+        <span>.material-whiteframe-z3</span>
+      </material-whiteframe>
+
+      <material-whiteframe class="material-whiteframe-z4" layout layout-align="center center">
+        <span>.material-whiteframe-z4</span>
+      </material-whiteframe>
+
+      <material-whiteframe class="material-whiteframe-z5" layout layout-align="center center">
+        <span>.material-whiteframe-z5</span>
+      </material-whiteframe>
+    </div>
   </material-content>
 
 </material-content>

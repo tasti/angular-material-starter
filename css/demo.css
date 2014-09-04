@@ -1,8 +1,3 @@
-/* Custom */
-material-content.prevent-scrolling div:first-child {
-  overflow: auto;
-}
-
 /* Buttons */
 section {
   background: #f7f7f7;
@@ -59,3 +54,9 @@ material-card {
   padding: 20px;
 }*/
 
+/* Whiteframe */
+material-whiteframe {
+  background: #fff;
+  margin: 20px;
+  padding: 20px;
+}

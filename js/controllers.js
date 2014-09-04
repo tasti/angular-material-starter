@@ -8,6 +8,9 @@ App.controller('DemoCtrl', [
         $scope.data.cb1 = true;
         $scope.data.cb2 = false;
 
+        /* Form */
+        $scope.data = {};
+
         /* Lists */
         $scope.todos = [
             {
@@ -49,8 +52,8 @@ App.controller('DemoCtrl', [
 
         /* Radio Button */
         $scope.data = {
-            group2 : '6',
-            group1 : '2'
+            group1 : '2',
+            group2 : '6'
         };
         $scope.radioData = [
             { label: 'Label 4', value: '4' },
@@ -64,5 +67,12 @@ App.controller('DemoCtrl', [
         $scope.removeItem = function() {
             $scope.radioData.pop();
         };
+
+        /* Slider */
+        $scope.data = {
+            slider1: 0,
+            slider2: 50,
+            slider3: 8
+        }
     }
 ]);
