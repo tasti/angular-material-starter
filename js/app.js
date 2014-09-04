@@ -1,6 +1,6 @@
 'use strict';
 
-var App = angular.module('myApp', ['ngMaterial', 'ngRoute']);
+var App = angular.module('myApp', ['ngAnimate', 'ngMaterial', 'ngRoute']);
 
 App.config([
     '$routeProvider',
