@@ -11,7 +11,7 @@ Visit https://material.angularjs.org to view some demo source code that can be d
 Demo
 ----
 
-You can view the starter demo at http://tasti-zakarie.github.io/angular-material-starter/
+You can view the starter demo at http://tasti.github.io/angular-material-starter/
 
 Source
 ------
